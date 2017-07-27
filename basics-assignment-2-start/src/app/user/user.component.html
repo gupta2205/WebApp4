@@ -1,0 +1,14 @@
+
+<input 
+type= "text"
+class="forn-control"
+[(ngModel)] = "userName">
+
+<h3> {{userName}} </h3>
+
+<button
+class="btn btn-primary"
+[disabled]="userUpdate()"
+(click)= "resetUser()"
+>
+ Reset User Name</button>
