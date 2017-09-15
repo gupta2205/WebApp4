@@ -1,6 +1,5 @@
-<button class="btn btn-primary" (click)="onToggle(); count()"> Display Details</button>
-<div [ngStyle]="{backgroundColor: getColor()}"
-[ngClass]="{online: clicks>5}">
+<button class="btn btn-primary" (click)="onClick()"> Display Details</button>
+<div>
 <p *ngIf="toggle; else othertext">
 Secret Password = tuna
 </p>
@@ -10,4 +9,7 @@ Secret Password = tuna
   <p> Nothing to show!!</p>
 </ng-template>
 </div>
-<p> {{clicks}}</p>
+<p *ngFor="let log of logs"
+[ngStyle]="{backgroundColor: log > 4 ? 'blue' : 'white'}"
+  [ngClass]="{'online': log > 4}"> 
+  {{log}}</p>
