@@ -12,7 +12,7 @@ export class ServerComponent implements OnInit {
   
   onClick() {
   this.toggle = !this.toggle;
-  this.logs.push(this.logs.length +1);
+  this.logs.push(new Date());
   }
 
   ngOnInit() {
